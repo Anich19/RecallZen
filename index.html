@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecallZen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header" id="headerSection">
+            <div class="recallzen-logo">
+                <h1>RecallZen</h1>
+            </div>
+            <p class="description">Play to increase your memory</p>
+            <ul class="instructions">
+                <li>* Select the number of cards.</li>
+                <li>* Click "Play Now" to start.</li>
+                <li>* Match all the pairs to win.</li>
+                <li>* Track your time and steps.</li>
+            </ul>
+            <div class="card-selection">
+                <label for="cardRange">Number of Cards:</label>
+                <select id="cardRange">
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                    <option value="60">60</option>
+                    <option value="70">70</option>
+                </select>
+                <button id="playButton" class="play-button">Play Now</button>
+            </div>
+        </div>
+        <div id="gameBoard" class="game-board" style="display: none;">
+            <div class="controls">
+                <div id="timer" class="time-steps">Time: <span>0s</span></div>
+                <div id="steps" class="time-steps">Steps: <span>0</span></div>
+                <button id="pauseButton" class="pause-button">Pause</button>
+                <p id="resumeInfo" class="resume-info" style="display: none;">Game paused. Click Resume to continue.</p>
+            </div>
+            <div id="board" class="board"></div>
+            <div id="congratsMessage" class="congrats-message" style="display: none;">
+                <h2>Congrats, you did it!!</h2>
+                <button id="playAgainButton" class="play-button">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
